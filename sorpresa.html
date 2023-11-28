@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Mensaje del cholito</title>
+    <script>
+        function decryptMessage() {
+            var key = document.getElementById("keyInput").value.toLowerCase();
+            var encryptedMessage = "Cqlaw nssudsa makso, tak xoyomdg fiexd si czlxill bgkutg. Ekmqrg cuw taqxe vfefjrfavl ekqm kldpjbea v tmp rwdmlgp. S hej cuw eojmdekxe nfqnwk ed eiyruefqq sña :l";
+            var decryptedMessage = "";
+
+            var alphabet = "abcdefghijklmnopqrstuvwxyz";
+
+            for (var i = 0; i < encryptedMessage.length; i++) {
+                var char = encryptedMessage[i].toLowerCase();
+                if (char >= 'a' && char <= 'z') {
+                    var shift = key.charCodeAt(i % key.length) - 'a'.charCodeAt(0);
+                    var index = (alphabet.indexOf(char) - shift + 26) % 26;
+                    decryptedMessage += alphabet.charAt(index);
+                } else {
+                    decryptedMessage += char; // Include non-alphabetic characters as they are
+                }
+            }
+
+            document.getElementById("decryptedMessage").innerHTML = decryptedMessage;
+            document.getElementById("hiddenLink").innerHTML = "Sigue este link para encontrar tu regalo"
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Misterio Navideño</h1>
+    <p>Mete aqui la clave en minusculas:</p>
+    <input type="text" id="keyInput">
+    <button onclick="decryptMessage()">Decrypt</button>
+    <p>Mensaje encriptado:</p>
+    <p id="decryptedMessage">Cqlaw nssudsa makso, tak xoyomdg fiexd si czlxill bgkutg. Ekmqrg cuw taqxe vfefjrfavl ekqm
+        kldpjbea v tmp rwdmlgp. S hej cuw eojmdekxe nfqnwk ed eiyruefqq sña :l</p>
+    <a id="hiddenLink" href="ubicacion/"></a>
+</body>
+
+</html>
