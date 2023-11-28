@@ -23,7 +23,9 @@
             }
 
             document.getElementById("decryptedMessage").innerHTML = decryptedMessage;
-            document.getElementById("hiddenLink").innerHTML = "Sigue este link para encontrar tu regalo"
+            if (key == "xmas") {
+                document.getElementById("hiddenLink").innerHTML = "Sigue este link para encontrar tu regalo"
+            }
         }
     </script>
 </head>
