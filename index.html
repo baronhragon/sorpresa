@@ -3,6 +3,17 @@
 
 <head>
     <title>Mensaje del cholito</title>
+    <style>
+        body {
+            background-image: linear-gradient(red, green);
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            color: antiquewhite;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-style: oblique;
+        }
+    </style>
     <script>
         function decryptMessage() {
             var key = document.getElementById("keyInput").value.toLowerCase();
@@ -32,15 +43,18 @@
 </head>
 
 <body>
-    <h1>Misterio Navideño</h1>
-    <p>Mete aqui la clave en minusculas:</p>
-    <input type="text" id="keyInput">
-    <button onclick="decryptMessage()">Decrypt</button>
-    <p>Mensaje encriptado:</p>
-    <p id="decryptedMessage">Cqlaw nssudsa makso, tak xoyomdg fiexd si czlxill bgkutg. Ekmqrg cuw taqxe vfefjrfavl ekqm
-        kldpjbea v tmp rwdmlgp. S hej cuw eojmdekxe nfqnwk ed eiyruefqq sña :l</p>
-    <p id="hiddenMessage"></p>
-    <img id=hiddenImage src="">
+    <div id="grad">
+        <h1>Misterio Navideño</h1>
+        <p>Mete aqui la clave en minusculas:</p>
+        <input type="text" id="keyInput">
+        <button onclick="decryptMessage()">Decrypt</button>
+        <p>Mensaje encriptado:</p>
+        <p id="decryptedMessage">Cqlaw nssudsa makso, tak xoyomdg fiexd si czlxill bgkutg. Ekmqrg cuw taqxe vfefjrfavl
+            ekqm
+            kldpjbea v tmp rwdmlgp. S hej cuw eojmdekxe nfqnwk ed eiyruefqq sña :l</p>
+        <p id="hiddenMessage"></p>
+        <img id=hiddenImage src="">
+    </div>
 </body>
 
 </html>
